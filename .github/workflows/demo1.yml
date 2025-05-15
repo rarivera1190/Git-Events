@@ -1,8 +1,8 @@
 name: Events Demo 1
 on: 
-  pull_request:
+  pull_request:               # workflow will run whenever a new pull request is open, or manually run it from the portal.
     types:
-      - opened
+      - opened                #can list more types using this format.
   workflow_dispatch:
 jobs:
   deploy:
