@@ -3,8 +3,6 @@ on:
   pull-request:
     types:
       - opened
-#      - edited
-#      - closed
   worflow_dispatch:
 jobs:
   deploy:
