@@ -3,7 +3,18 @@ on:
   pull_request:               # workflow will run whenever a new pull request is open, or manually run it from the portal.
     types:
       - opened                #can list more types using this format.
+    branches:
+      - master
+      - 'dev-*'
+      - 'feat/**'   #double asterisk allows for further slashes '/'  
   workflow_dispatch:
+  push:
+    branches:
+      - master
+      - 'dev-*'
+      - 'feat/**'   #double asterisk allows for further slashes '/'
+    paths-ignore:
+      - 'github/worflows/*'         #Worflow will trigger if theres is a push to any of the previous branches but it did not change a file in this folder.
 jobs:
   deploy:
     runs-on: ubuntu-latest
