@@ -14,7 +14,7 @@ on:
       - 'dev-*'
       - 'feat/**'   #double asterisk allows for further slashes '/'
     paths-ignore:
-      - 'github/worflows/*'         #Worflow will trigger if theres is a push to any of the previous branches but it did not change a file in this folder.
+      - '.github/worflows/*'         #Worflow will trigger if theres is a push to any of the previous branches but it did not change a file in this folder.
 jobs:
   deploy:
     runs-on: ubuntu-latest
